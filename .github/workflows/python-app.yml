@@ -53,7 +53,7 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Python App
-      id: run__python_app
+      id: run_python_app
       run: python main.py
       
     - name: Save Output
