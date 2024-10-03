@@ -26,10 +26,10 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Run security checks
-      uses: bandit/bandit-action@v3  # Code security checks
+      uses: mdegis/bandit-action@v1.1
 
     - name: Run code linting
-      uses: pycodestyle/pycodestyle-action@v2  # Code style checks
+      uses: andymckay/pycodestyle-action@0.1.3
 
   runapp:
     needs: build
