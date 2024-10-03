@@ -54,10 +54,10 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Python App
       id: run_python_app
-      run: python main.py
+      run: python main.py > output.txt
       
-    - name: Save Output
-      run: echo "${{ steps.run_python_app.outputs.stdout }}" > output.txt
+    #- name: Save Output
+    #  run: echo "${{ steps.run_python_app.outputs.stdout }}" > output.txt
 
     - uses: actions/upload-artifact@v4
       with:
